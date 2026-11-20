@@ -1,0 +1,509 @@
+<!--A one-page tool for summing up points used in building monsters.  Just an aid in keeping track and keeping things consistent-->
+
+<html>
+	<head>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>
+					BRAINS
+				</th>
+				<th>
+					BRAWN
+				</th>
+				<th>
+					Points Available
+				</th>
+				<th>
+					Points Spent
+				</th>
+			</th>
+			<tr>
+				<td>
+					<input type="number" class="statsInput" value="0" min="0"/>
+				</td>
+				<td>
+					<input type="number" class="statsInput" value="0" min="0"/>
+				</td>
+				<td>
+					<p id="pointsAvailable">0</p>
+				</td>
+				<td>
+					<p id="pointsSpent">0</p>
+				</td>
+			</tr>
+		</table>
+		<br/>
+		<h3>
+			Active Blocks
+		</h3>
+		<table>
+			<tr>
+				<td>
+					ASSIMILATE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					ASSIST
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					BOLSTER
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					BUZZKILL
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					CHARGE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					COPY
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					CREATE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					CURE
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					DAMAGE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					DECEIVE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					DECOMPOSE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					ENGULF
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					EXPRESS
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					FORBID
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					HINDER
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					INFLICT
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					INVADE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					PUPPET
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					RECLAIM
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					REPAIR
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					SCAVENGE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					SPAWN
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					SWARM
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					TRANSFUSE
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					VANISH
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+		</table>
+		<h3>
+			Passive Blocks
+		</h3>
+		<table>
+			<tr>
+				<td>
+					ADAPT
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					ARMOR
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					CORRAL
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					CULL
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					EMPTY
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					ENCORE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					ENGAGE
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					IMPRESS
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					LURE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					MOVE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					MUFFLE
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					PERCEIVE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					PROTECT
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					RAMPAGE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					RECOVER
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					REGENERATE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					RESIST
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+		</table>
+		<h3>
+			Enhancement Blocks
+		</h3>
+		<table>
+			<tr>
+				<td>
+					ABSORB
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					AGGREGATE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					APPEND
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					ARMAMENTIFY
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					AWAKEN
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					BLINK
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					CAST
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					CHANGE
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					CLEAVE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					CLING
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					COMBINE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					COMMAND
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					COMPOUND
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					CONCOCT
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					COUNTER
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					DASH
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					DETONATE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					DISCLUDE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					DISCRIMINATE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					DRAIN
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					EMANATE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					ENDURE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					EXPAND
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					FESTER
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					FLATTEN
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					HIJACK
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					IGNORE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					INSULATE
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					LINK
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					PENETRATE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					PIERCE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					PHASE
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					PREPARE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					REACH
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					RECOIL
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					RESPOND
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					SAMPLE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					SHAMBLE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					SHARE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					SHED
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					SHIELD
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					SHUNT
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					SPOUT
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					SQUEEZE
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					SUSTAIN
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					TEND
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					TRANSFER
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					TRANSPLATE
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					TRAMPLE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					UPSCALE
+					<input type="number" class="pointInput"></input>
+				</td>
+				<td>
+					WANDER
+					<input type="number" class="pointInput"></input>
+				</td>
+			</tr>
+		</table>
+		<br/><br/>
+		<b>Custom/Other</b>
+		<input type="number" class="pointInput"></input>
+	</body>
+	<script>
+		const pointInputElements = document.getElementsByClassName("pointInput");
+		const statsInputElements = document.getElementsByClassName("statsInput");
+		const pointsAvailableInput = document.getElementById("pointsAvailable");
+		const pointsSpentInput = document.getElementById("pointsSpent");
+
+		for (let input of pointInputElements){
+			input.value = 0;
+			input.addEventListener("change", updatePointsSpent);
+		}
+		for (let input of statsInputElements){
+			input.value = 0;
+			input.addEventListener("change", updatePointsAvailable);
+		}
+		
+		function updatePointsSpent(event){
+			let sum = 0;
+			for (let i of pointInputElements){
+				sum += Number(i.value);
+			}
+			pointsSpentInput.innerHTML = sum;
+		}
+		function updatePointsAvailable(event){
+			let sum = 0;
+			for (let i of statsInputElements){
+				sum += Number(i.value);
+			}
+			pointsAvailableInput.innerHTML = sum;
+		}
+	</script>
+</html>
