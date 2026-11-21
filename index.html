@@ -4,7 +4,7 @@
 	<head>
 	</head>
 	<body>
-		<table>
+		<table class="upperTable">
 			<tr>
 				<th>
 					BRAINS
@@ -13,10 +13,7 @@
 					BRAWN
 				</th>
 				<th>
-					Points Available
-				</th>
-				<th>
-					Points Spent
+					Points Allowed
 				</th>
 			</th>
 			<tr>
@@ -27,18 +24,40 @@
 					<input type="number" class="statsInput" value="0" min="0"/>
 				</td>
 				<td>
-					<p id="pointsAvailable">0</p>
+					<p id="pointsAllowed">0</p>
 				</td>
+			</tr>
+			<tr>
+		</table>
+		<br/>
+		<table class="upperTable">
+				<th>
+					Points Spent
+				</th>
+				<th>
+					Points Gained<sup>[1][2]</sup>
+				</th>
+				<th>
+					Total
+				</th>
+			</tr>
+			<tr>
 				<td>
 					<p id="pointsSpent">0</p>
 				</td>
+				<td>
+					<p id="pointsGained">0</p>
+				</td>
+				<td>
+					<b id="pointsTotal">0</b>
+				</td>
 			</tr>
 		</table>
-		<br/>
-		<br/>
-		/!\ When using blocks like RECOIL or LINK that are worth "negative" points,
+		<br/><br/>
+		<b>[1]</b> When using blocks like RECOIL or LINK that are worth "negative" points,
 		or counting weaknesses, set input to *negative* values.
 		<br/>
+		<b>[2]</b> Monsters can only have points gained via weaknesses equal to <b>half their "Points Allowed", rounded <em>down</em></b>
 		<br/>
 		<h3>
 			Active Blocks
@@ -375,7 +394,7 @@
 			<tr>
 				<td>
 					LINK
-					<input type="number" class="pointInput"></input>
+					<input type="number" class="pointInput" max="0"></input>
 				</td>
 				<td>
 					PENETRATE
@@ -401,7 +420,7 @@
 				</td>
 				<td>
 					RECOIL
-					<input type="number" class="pointInput"></input>
+					<input type="number" class="pointInput" max="0"></input>
 				</td>
 				<td>
 					RESPOND
@@ -484,8 +503,10 @@
 	<script>
 		const pointInputElements = document.getElementsByClassName("pointInput");
 		const statsInputElements = document.getElementsByClassName("statsInput");
-		const pointsAvailableInput = document.getElementById("pointsAvailable");
-		const pointsSpentInput = document.getElementById("pointsSpent");
+		const pointsAllowedInput = document.getElementById("pointsAllowed");
+		const pointsSpentElement = document.getElementById("pointsSpent");
+		const pointsGainedElement = document.getElementById("pointsGained");
+		const pointsTotalElement = document.getElementById("pointsTotal");
 
 		for (let input of pointInputElements){
 			input.value = 0;
@@ -493,22 +514,38 @@
 		}
 		for (let input of statsInputElements){
 			input.value = 0;
-			input.addEventListener("change", updatePointsAvailable);
+			input.addEventListener("change", updatePointsAllowed);
 		}
 		
 		function updatePointsSpent(event){
-			let sum = 0;
+			let pSum = 0;
+			let nSum = 0;
 			for (let i of pointInputElements){
-				sum += Number(i.value);
+				let iVal = Number(i.value);
+				if (iVal < 0){
+					nSum += iVal;
+				} else if (iVal > 0){
+					pSum += iVal;
+				}
 			}
-			pointsSpentInput.innerHTML = sum;
+			pointsSpentElement.innerHTML = pSum;
+			pointsGainedElement.innerHTML = nSum;
+			pointsTotalElement.innerHTML = pSum + nSum;
 		}
-		function updatePointsAvailable(event){
+		function updatePointsAllowed(event){
 			let sum = 0;
 			for (let i of statsInputElements){
 				sum += Number(i.value);
 			}
-			pointsAvailableInput.innerHTML = sum;
+			pointsAllowedInput.innerHTML = sum;
 		}
 	</script>
+	<style>
+		.upperTable, .upperTable tr td, .upperTable tr th {
+			border: 1px solid black;
+		}
+		.upperTable tr td, .upperTable tr th {
+			text-align: center;
+		}
+	</style>
 </html>
